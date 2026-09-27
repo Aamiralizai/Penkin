@@ -1,0 +1,5 @@
+DO_mM,relative_penicillin_rate,ACV_direction,IPN_direction,source_note
+0.136,1.00,baseline,baseline,"Non-limiting reference; Janoska et al. 2022"
+0.025,0.67,increase,decrease,"Approximate endpoint from published Figure 4; qualitative metabolite directions from text"
+0.013,0.32,increase,decrease,"Approximate endpoint from published Figure 4; qualitative metabolite directions from text"
+0.009,0.01,increase,decrease,"Approximate endpoint from published Figure 4; near-zero rate in published trajectory"

@@ -1,0 +1,7 @@
+copy_number,penicillin_V_mmol_gDW,IPN_mg_gDW,ACV_mg_gDW,ACVS_protein_pct,IPNS_protein_pct,IAT_protein_pct,PCL_protein_pct,source_note
+0,0.00,0.00,0.00,0.0,0.0,0.0,12.0,"Approximate values digitized from Nijland et al. 2010 Figures 3B and 5; not raw data"
+1,0.18,0.18,0.20,12.5,12.5,12.5,12.5,"Approximate values digitized from Nijland et al. 2010 Figures 3B and 5; not raw data"
+3,0.56,0.55,0.35,22.0,18.0,16.0,9.0,"Approximate values digitized from Nijland et al. 2010 Figures 3B and 5; not raw data"
+4,0.53,2.35,0.10,32.0,27.0,17.0,5.5,"Approximate values digitized from Nijland et al. 2010 Figures 3B and 5; not raw data"
+7,0.89,4.90,0.40,41.0,34.0,19.0,5.0,"Approximate values digitized from Nijland et al. 2010 Figures 3B and 5; not raw data"
+8,0.90,4.90,0.25,35.0,35.0,23.0,7.0,"Approximate values digitized from Nijland et al. 2010 Figures 3B and 5; not raw data"

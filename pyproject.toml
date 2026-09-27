@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "penkin"
+version = "1.0.0"
+description = "Kinetic modeling of the committed penicillin G pathway in Penicillium rubens"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pandas>=2.0",
+  "matplotlib>=3.7"
+]
+
+[project.optional-dependencies]
+analysis = ["python-libsbml>=5.20", "scikit-learn>=1.4"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["penkin", "analysis"]
+
+[tool.setuptools.package-data]
+penkin = ["data/*.xml", "data/*.gz", "data/*.md", "data/*.csv", "data/geo_raw/*.gz", "data/geo_raw/GSE9825_RAW/*.gz", "data/geo_raw/GSE12632_RAW/*.gz"]

@@ -1,0 +1,7 @@
+compound,measured_flux,balanced_flux,units,source
+Glucose,-13.3,-13.1,mmol_Cmol_h,van Gulik et al. 2000 Table I example at D=0.0302 h-1
+O2,-36.2,-35.8,mmol_Cmol_h,van Gulik et al. 2000 Table I example at D=0.0302 h-1
+CO2,37.5,38.1,mmol_Cmol_h,van Gulik et al. 2000 Table I example at D=0.0302 h-1
+PAA,-0.691,-0.628,mmol_Cmol_h,van Gulik et al. 2000 Table I example at D=0.0302 h-1
+PenG_plus_PIO,0.562,0.584,mmol_Cmol_h,van Gulik et al. 2000 Table I example at D=0.0302 h-1
+6APA,0.0344,0.0351,mmol_Cmol_h,van Gulik et al. 2000 Table I example at D=0.0302 h-1

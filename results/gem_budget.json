@@ -1,0 +1,27 @@
+{
+  "reactions": [
+    "r0814",
+    "r0812",
+    "r0747",
+    "r0813"
+  ],
+  "gross_consumed_per_penicillin_G": {
+    "ATP": 4.0,
+    "O2": 1.0,
+    "CoA": 1.0,
+    "alpha-aminoadipate": 1.0,
+    "cysteine": 1.0,
+    "valine": 1.0,
+    "phenylacetate": 1.0
+  },
+  "net_consumed_per_penicillin_G": {
+    "ATP": 4.0,
+    "O2": 1.0,
+    "CoA": 0.0,
+    "alpha-aminoadipate": 0.0,
+    "cysteine": 1.0,
+    "valine": 1.0,
+    "phenylacetate": 1.0
+  },
+  "note": "Summed from iAL1006 stoichiometry; no flux-balance simulation is performed. Gross counts reactant consumption; net subtracts products, so CoA and the alpha-aminoadipate released by the acyltransferase (r0813) cancel."
+}

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Reduced-size (--quick) outputs and intermediate arrays.
+# results/ and figures/ hold the reference outputs and are tracked.
+results_quick/
+figures_quick/
+results/figure_data.npz
+*.zip

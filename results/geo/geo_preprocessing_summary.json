@@ -1,0 +1,870 @@
+{
+  "GSE9825": {
+    "dataset": "GSE9825",
+    "samples": [
+      {
+        "id": "GSM247945",
+        "title": "Glucose-limited chemostat in absence of PAA strain DS17690 -1",
+        "strain": "DS17690",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM247946",
+        "title": "Glucose-limited chemostat in absence of PAA strain DS17690 -2",
+        "strain": "DS17690",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM247947",
+        "title": "Glucose-limited chemostat in absence of PAA strain DS17690 -3",
+        "strain": "DS17690",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM247948",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -1",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM247949",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -2",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM247950",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -3",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM247951",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -4",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM247952",
+        "title": "Glucose-limited chemostat in absence of PAA strain Wisconsin 14-1255 -1",
+        "strain": "Wisconsin54-1255",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM247953",
+        "title": "Glucose-limited chemostat in absence of PAA strain Wisconsin 14-1255 -2",
+        "strain": "Wisconsin54-1255",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM247954",
+        "title": "Glucose-limited chemostat in absence of PAA strain Wisconsin 14-1255 -3",
+        "strain": "Wisconsin54-1255",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM247955",
+        "title": "Glucose-limited chemostat in presence of PAA strain Wisconsin 14-1255 -1",
+        "strain": "Wisconsin54-1255",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM247956",
+        "title": "Glucose-limited chemostat in presence of PAA strain Wisconsin 14-1255 -2",
+        "strain": "Wisconsin54-1255",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM247957",
+        "title": "Glucose-limited chemostat in presence of PAA strain Wisconsin 14-1255 -3",
+        "strain": "Wisconsin54-1255",
+        "PAA": "+PAA"
+      }
+    ],
+    "groups": {
+      "DS17690_-PAA": [
+        "GSM247945",
+        "GSM247946",
+        "GSM247947"
+      ],
+      "DS17690_+PAA": [
+        "GSM247948",
+        "GSM247949",
+        "GSM247950",
+        "GSM247951"
+      ],
+      "Wisconsin54-1255_-PAA": [
+        "GSM247952",
+        "GSM247953",
+        "GSM247954"
+      ],
+      "Wisconsin54-1255_+PAA": [
+        "GSM247955",
+        "GSM247956",
+        "GSM247957"
+      ]
+    },
+    "series_matrix": {
+      "key_probes": {
+        "ACVS_pcbAB": {
+          "probe": "Pc21g21390_s_at",
+          "values": {
+            "GSM247945": 4504.1,
+            "GSM247946": 4140.2,
+            "GSM247947": 4391.3,
+            "GSM247948": 4634.1,
+            "GSM247949": 4959.9,
+            "GSM247950": 4010.6,
+            "GSM247951": 4624.8,
+            "GSM247952": 1181.9,
+            "GSM247953": 1102.0,
+            "GSM247954": 1010.0,
+            "GSM247955": 2002.0,
+            "GSM247956": 2118.9,
+            "GSM247957": 2059.1
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 2.212305825242719,
+          "bootstrap_plusPAA": {
+            "median": 2.2134344660194176,
+            "q025": 2.037360970602101,
+            "q25": 2.1564393089522103,
+            "q75": 2.274986928531747,
+            "q975": 2.3723878873843414
+          },
+          "DS17690_vs_Wisconsin_minusPAA": 3.9574971917787423,
+          "bootstrap_minusPAA": {
+            "median": 3.9574971917787423,
+            "q025": 3.6562121299555663,
+            "q25": 3.847020249552203,
+            "q75": 4.071207720416003,
+            "q975": 4.291960281870597
+          }
+        },
+        "IPNS_pcbC": {
+          "probe": "Pc21g21380_at",
+          "values": {
+            "GSM247945": 5602.0,
+            "GSM247946": 4701.8,
+            "GSM247947": 5017.1,
+            "GSM247948": 4954.9,
+            "GSM247949": 5561.9,
+            "GSM247950": 4628.5,
+            "GSM247951": 5301.9,
+            "GSM247952": 1333.8,
+            "GSM247953": 1291.4,
+            "GSM247954": 1310.7,
+            "GSM247955": 2025.8,
+            "GSM247956": 2382.6,
+            "GSM247957": 2737.4
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 2.1460718184108147,
+          "bootstrap_plusPAA": {
+            "median": 2.1460718184108147,
+            "q025": 1.8562819762262328,
+            "q25": 2.040808664443709,
+            "q75": 2.2678029745251065,
+            "q975": 2.5233488004738867
+          },
+          "DS17690_vs_Wisconsin_minusPAA": 3.8926039787596234,
+          "bootstrap_minusPAA": {
+            "median": 3.873609425566344,
+            "q025": 3.6014400245110556,
+            "q25": 3.766101001840115,
+            "q75": 4.015975343521253,
+            "q975": 4.269925557051754
+          }
+        },
+        "PenDE_penDE": {
+          "probe": "Pc21g21370_at",
+          "values": {
+            "GSM247945": 1917.0,
+            "GSM247946": 1937.3,
+            "GSM247947": 2126.8,
+            "GSM247948": 2944.6,
+            "GSM247949": 3322.2,
+            "GSM247950": 2114.8,
+            "GSM247951": 2476.6,
+            "GSM247952": 1144.0,
+            "GSM247953": 1041.9,
+            "GSM247954": 908.1,
+            "GSM247955": 1717.1,
+            "GSM247956": 1875.7,
+            "GSM247957": 1888.2
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 1.4857963875205253,
+          "bootstrap_plusPAA": {
+            "median": 1.4857963875205256,
+            "q025": 1.238071120115157,
+            "q25": 1.3928097521275273,
+            "q75": 1.5869731800766285,
+            "q975": 1.756682779104304
+          },
+          "DS17690_vs_Wisconsin_minusPAA": 1.9331286360698128,
+          "bootstrap_minusPAA": {
+            "median": 1.9331286360698128,
+            "q025": 1.736829836829837,
+            "q25": 1.859184960509325,
+            "q75": 2.013647726504966,
+            "q975": 2.1880115993099145
+          }
+        },
+        "PCL_phl": {
+          "probe": "Pc22g14900_at",
+          "values": {
+            "GSM247945": 273.6,
+            "GSM247946": 217.7,
+            "GSM247947": 176.2,
+            "GSM247948": 460.2,
+            "GSM247949": 298.2,
+            "GSM247950": 494.6,
+            "GSM247951": 273.5,
+            "GSM247952": 107.5,
+            "GSM247953": 115.9,
+            "GSM247954": 102.2,
+            "GSM247955": 162.1,
+            "GSM247956": 130.0,
+            "GSM247957": 127.8
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 2.7265420338175756,
+          "bootstrap_plusPAA": {
+            "median": 2.7265420338175756,
+            "q025": 2.0278493214065394,
+            "q25": 2.4638375165125495,
+            "q75": 3.0050860719874803,
+            "q975": 3.466026970954357
+          },
+          "DS17690_vs_Wisconsin_minusPAA": 2.0500614250614246,
+          "bootstrap_minusPAA": {
+            "median": 2.0500614250614246,
+            "q025": 1.623464373464373,
+            "q25": 1.878378378378378,
+            "q75": 2.2135497970652516,
+            "q975": 2.4947814742335295
+          }
+        }
+      }
+    },
+    "raw_pm_qn_sensitivity": {
+      "method": "PM-only log2 + across-array quantile normalization + mean probe summarization (sensitivity analysis; not MAS5/GCOS and not claimed as exact RMA)",
+      "qc": [
+        {
+          "sample": "GSM247945",
+          "n_pm": 170976,
+          "median_pm": 72.0,
+          "q25_pm": 59.0,
+          "q75_pm": 100.0,
+          "mean_pm": 121.1775894165039,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247946",
+          "n_pm": 170976,
+          "median_pm": 77.0,
+          "q25_pm": 58.0,
+          "q75_pm": 120.0,
+          "mean_pm": 142.14427185058594,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247947",
+          "n_pm": 170976,
+          "median_pm": 64.0,
+          "q25_pm": 50.0,
+          "q75_pm": 102.0,
+          "mean_pm": 131.99038696289062,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247948",
+          "n_pm": 170976,
+          "median_pm": 78.0,
+          "q25_pm": 58.0,
+          "q75_pm": 129.0,
+          "mean_pm": 170.27894592285156,
+          "pct_pm_ge_20000": 0.001169754819389856
+        },
+        {
+          "sample": "GSM247949",
+          "n_pm": 170976,
+          "median_pm": 67.0,
+          "q25_pm": 53.0,
+          "q75_pm": 105.0,
+          "mean_pm": 142.5522918701172,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247950",
+          "n_pm": 170976,
+          "median_pm": 82.0,
+          "q25_pm": 64.0,
+          "q75_pm": 129.0,
+          "mean_pm": 172.40902709960938,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247951",
+          "n_pm": 170976,
+          "median_pm": 78.0,
+          "q25_pm": 60.0,
+          "q75_pm": 121.0,
+          "mean_pm": 150.07923889160156,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247952",
+          "n_pm": 170976,
+          "median_pm": 124.0,
+          "q25_pm": 99.0,
+          "q75_pm": 187.0,
+          "mean_pm": 227.72125244140625,
+          "pct_pm_ge_20000": 0.000584877409694928
+        },
+        {
+          "sample": "GSM247953",
+          "n_pm": 170976,
+          "median_pm": 116.0,
+          "q25_pm": 90.0,
+          "q75_pm": 186.0,
+          "mean_pm": 233.68072509765625,
+          "pct_pm_ge_20000": 0.001754632229084784
+        },
+        {
+          "sample": "GSM247954",
+          "n_pm": 170976,
+          "median_pm": 125.0,
+          "q25_pm": 102.0,
+          "q75_pm": 181.0,
+          "mean_pm": 217.76361083984375,
+          "pct_pm_ge_20000": 0.000584877409694928
+        },
+        {
+          "sample": "GSM247955",
+          "n_pm": 170976,
+          "median_pm": 99.0,
+          "q25_pm": 79.0,
+          "q75_pm": 149.0,
+          "mean_pm": 191.13900756835938,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM247956",
+          "n_pm": 170976,
+          "median_pm": 114.0,
+          "q25_pm": 90.0,
+          "q75_pm": 177.0,
+          "mean_pm": 231.80931091308594,
+          "pct_pm_ge_20000": 0.000584877409694928
+        },
+        {
+          "sample": "GSM247957",
+          "n_pm": 170976,
+          "median_pm": 99.0,
+          "q25_pm": 80.0,
+          "q75_pm": 145.0,
+          "mean_pm": 182.37442016601562,
+          "pct_pm_ge_20000": 0.0
+        }
+      ],
+      "sample_correlation_min": 0.865714908972458,
+      "sample_correlation_median": 0.9067330892196933,
+      "pca_variance_PC1": 0.5169412537347483,
+      "pca_variance_PC2": 0.22037770277669264,
+      "key_probes": {
+        "ACVS_pcbAB": {
+          "probe": "Pc21g21390_s_at",
+          "log2_values": {
+            "GSM247945": 11.173235722078267,
+            "GSM247946": 11.188072983151608,
+            "GSM247947": 11.43059915750882,
+            "GSM247948": 12.197835031098736,
+            "GSM247949": 12.019470844494466,
+            "GSM247950": 11.827939113280813,
+            "GSM247951": 11.648882811360261,
+            "GSM247952": 8.917014097580589,
+            "GSM247953": 8.760158281919557,
+            "GSM247954": 8.54445526696531,
+            "GSM247955": 9.661315470284325,
+            "GSM247956": 9.66087109884266,
+            "GSM247957": 9.585940786193508
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 4.882058214906684,
+          "DS17690_vs_Wisconsin_minusPAA": 5.749461103688491
+        },
+        "IPNS_pcbC": {
+          "probe": "Pc21g21380_at",
+          "log2_values": {
+            "GSM247945": 11.98840716638818,
+            "GSM247946": 12.140883353818909,
+            "GSM247947": 12.216761364266388,
+            "GSM247948": 12.77443224536587,
+            "GSM247949": 12.814623653143816,
+            "GSM247950": 12.678774055482688,
+            "GSM247951": 12.38287366360831,
+            "GSM247952": 9.442102164140847,
+            "GSM247953": 9.299458388602675,
+            "GSM247954": 9.207831286154715,
+            "GSM247955": 10.048484164148999,
+            "GSM247956": 10.492596418671823,
+            "GSM247957": 10.437146418877637
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 5.051109218965603,
+          "DS17690_vs_Wisconsin_minusPAA": 6.959032195012715
+        },
+        "PenDE_penDE": {
+          "probe": "Pc21g21370_at",
+          "log2_values": {
+            "GSM247945": 9.412061076810405,
+            "GSM247946": 9.635432177489793,
+            "GSM247947": 9.802785620255866,
+            "GSM247948": 10.352651945123002,
+            "GSM247949": 10.539634173775442,
+            "GSM247950": 9.961021619314733,
+            "GSM247951": 10.012499319529592,
+            "GSM247952": 8.97188564858552,
+            "GSM247953": 8.881776407112925,
+            "GSM247954": 8.743833933741405,
+            "GSM247955": 9.518570671675372,
+            "GSM247956": 9.800487226746867,
+            "GSM247957": 9.753170111730658
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 1.4396409994485297,
+          "DS17690_vs_Wisconsin_minusPAA": 1.682874542415255
+        },
+        "PCL_phl": {
+          "probe": "Pc22g14900_at",
+          "log2_values": {
+            "GSM247945": 7.740454786637048,
+            "GSM247946": 7.439617633766784,
+            "GSM247947": 7.41870843075543,
+            "GSM247948": 8.235775499116539,
+            "GSM247949": 7.876693362897067,
+            "GSM247950": 8.277395965646303,
+            "GSM247951": 7.64228463149363,
+            "GSM247952": 7.186141709822749,
+            "GSM247953": 7.21380723982094,
+            "GSM247954": 7.257589843768539,
+            "GSM247955": 7.417224589388809,
+            "GSM247956": 7.389953450519954,
+            "GSM247957": 7.334900090139072
+          },
+          "DS17690_vs_Wisconsin_plusPAA": 1.5447192501046156,
+          "DS17690_vs_Wisconsin_minusPAA": 1.2429319853011658
+        }
+      }
+    }
+  },
+  "GSE12632": {
+    "dataset": "GSE12632",
+    "samples": [
+      {
+        "id": "GSM315912",
+        "title": "Carbon-limited chemostat of Penicillium chrysogenum DS50661 (cluster free strain) in absence of side chain -1",
+        "strain": "DS50661",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM315913",
+        "title": "Carbon-limited chemostat of Penicillium chrysogenum DS50661 (cluster free strain) in absence of side chain -2",
+        "strain": "DS50661",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM315914",
+        "title": "Carbon-limited chemostat of Penicillium chrysogenum DS50661 (cluster free strain) in absence of side chain -3",
+        "strain": "DS50661",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM315960",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -1",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM315961",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -2",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM315962",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -3",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM315963",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS17690 -4",
+        "strain": "DS17690",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM315964",
+        "title": "Glucose-limited chemostat in absence of PAA strain DS17690 -1",
+        "strain": "DS17690",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM315965",
+        "title": "Glucose-limited chemostat in absence of PAA strain DS17690 -2",
+        "strain": "DS17690",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM315966",
+        "title": "Glucose-limited chemostat in absence of PAA strain DS17690 -3",
+        "strain": "DS17690",
+        "PAA": "-PAA"
+      },
+      {
+        "id": "GSM317178",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS50661 -1",
+        "strain": "DS50661",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM317179",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS50661 -2",
+        "strain": "DS50661",
+        "PAA": "+PAA"
+      },
+      {
+        "id": "GSM317180",
+        "title": "Glucose-limited chemostat in presence of PAA strain DS50661 -3",
+        "strain": "DS50661",
+        "PAA": "+PAA"
+      }
+    ],
+    "groups": {
+      "DS50661_-PAA": [
+        "GSM315912",
+        "GSM315913",
+        "GSM315914"
+      ],
+      "DS17690_+PAA": [
+        "GSM315960",
+        "GSM315961",
+        "GSM315962",
+        "GSM315963"
+      ],
+      "DS17690_-PAA": [
+        "GSM315964",
+        "GSM315965",
+        "GSM315966"
+      ],
+      "DS50661_+PAA": [
+        "GSM317178",
+        "GSM317179",
+        "GSM317180"
+      ]
+    },
+    "series_matrix": {
+      "key_probes": {
+        "ACVS_pcbAB": {
+          "probe": "Pc21g21390_s_at",
+          "values": {
+            "GSM315912": 0.6,
+            "GSM315913": 0.1,
+            "GSM315914": 0.1,
+            "GSM315960": 4634.1,
+            "GSM315961": 4959.9,
+            "GSM315962": 4010.6,
+            "GSM315963": 4624.8,
+            "GSM315964": 4504.1,
+            "GSM315965": 4140.2,
+            "GSM315966": 4391.3,
+            "GSM317178": 0.2,
+            "GSM317179": 0.1,
+            "GSM317180": 1.1
+          },
+          "DS17690_vs_clusterfree_plusPAA": 9765.75,
+          "DS17690_vs_clusterfree_minusPAA": 16294.5,
+          "DS17690_PAA_effect": 1.0488239896897726,
+          "DS50661_PAA_effect": 1.7500000000000002
+        },
+        "IPNS_pcbC": {
+          "probe": "Pc21g21380_at",
+          "values": {
+            "GSM315912": 1.4,
+            "GSM315913": 0.3,
+            "GSM315914": 0.1,
+            "GSM315960": 4954.9,
+            "GSM315961": 5561.9,
+            "GSM315962": 4628.5,
+            "GSM315963": 5301.9,
+            "GSM315964": 5602.0,
+            "GSM315965": 4701.8,
+            "GSM315966": 5017.1,
+            "GSM317178": 2.1,
+            "GSM317179": 0.5,
+            "GSM317180": 3.7
+          },
+          "DS17690_vs_clusterfree_plusPAA": 2434.1904761904757,
+          "DS17690_vs_clusterfree_minusPAA": 8511.611111111111,
+          "DS17690_PAA_effect": 1.00094641959676,
+          "DS50661_PAA_effect": 3.5000000000000004
+        },
+        "PenDE_penDE": {
+          "probe": "Pc21g21370_at",
+          "values": {
+            "GSM315912": 0.2,
+            "GSM315913": 0.2,
+            "GSM315914": 2.2,
+            "GSM315960": 2944.6,
+            "GSM315961": 3322.2,
+            "GSM315962": 2114.8,
+            "GSM315963": 2476.6,
+            "GSM315964": 1917.0,
+            "GSM315965": 1937.3,
+            "GSM315966": 2126.8,
+            "GSM317178": 0.5,
+            "GSM317179": 1.7,
+            "GSM317180": 5.5
+          },
+          "DS17690_vs_clusterfree_plusPAA": 1057.616883116883,
+          "DS17690_vs_clusterfree_minusPAA": 2300.4230769230767,
+          "DS17690_PAA_effect": 1.3615639263680592,
+          "DS50661_PAA_effect": 2.9615384615384617
+        },
+        "PCL_phl": {
+          "probe": "Pc22g14900_at",
+          "values": {
+            "GSM315912": 175.0,
+            "GSM315913": 160.6,
+            "GSM315914": 202.1,
+            "GSM315960": 460.2,
+            "GSM315961": 298.2,
+            "GSM315962": 494.6,
+            "GSM315963": 273.5,
+            "GSM315964": 273.6,
+            "GSM315965": 217.7,
+            "GSM315966": 176.2,
+            "GSM317178": 390.5,
+            "GSM317179": 338.2,
+            "GSM317180": 498.3
+          },
+          "DS17690_vs_clusterfree_plusPAA": 0.9330684596577017,
+          "DS17690_vs_clusterfree_minusPAA": 1.241398549376976,
+          "DS17690_PAA_effect": 1.7151685393258427,
+          "DS50661_PAA_effect": 2.2819416031244186
+        }
+      }
+    },
+    "raw_pm_qn_sensitivity": {
+      "method": "PM-only log2 + across-array quantile normalization + mean probe summarization (sensitivity analysis; not MAS5/GCOS and not claimed as exact RMA)",
+      "qc": [
+        {
+          "sample": "GSM315912",
+          "n_pm": 170976,
+          "median_pm": 81.0,
+          "q25_pm": 57.0,
+          "q75_pm": 145.0,
+          "mean_pm": 182.89268493652344,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315913",
+          "n_pm": 170976,
+          "median_pm": 75.0,
+          "q25_pm": 57.0,
+          "q75_pm": 124.0,
+          "mean_pm": 153.78799438476562,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315914",
+          "n_pm": 170976,
+          "median_pm": 87.0,
+          "q25_pm": 71.0,
+          "q75_pm": 128.0,
+          "mean_pm": 162.8892059326172,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315960",
+          "n_pm": 170976,
+          "median_pm": 78.0,
+          "q25_pm": 58.0,
+          "q75_pm": 129.0,
+          "mean_pm": 170.27894592285156,
+          "pct_pm_ge_20000": 0.001169754819389856
+        },
+        {
+          "sample": "GSM315961",
+          "n_pm": 170976,
+          "median_pm": 67.0,
+          "q25_pm": 53.0,
+          "q75_pm": 105.0,
+          "mean_pm": 142.5522918701172,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315962",
+          "n_pm": 170976,
+          "median_pm": 82.0,
+          "q25_pm": 64.0,
+          "q75_pm": 129.0,
+          "mean_pm": 172.40902709960938,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315963",
+          "n_pm": 170976,
+          "median_pm": 78.0,
+          "q25_pm": 60.0,
+          "q75_pm": 121.0,
+          "mean_pm": 150.07923889160156,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315964",
+          "n_pm": 170976,
+          "median_pm": 72.0,
+          "q25_pm": 59.0,
+          "q75_pm": 100.0,
+          "mean_pm": 121.1775894165039,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315965",
+          "n_pm": 170976,
+          "median_pm": 77.0,
+          "q25_pm": 58.0,
+          "q75_pm": 120.0,
+          "mean_pm": 142.14427185058594,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM315966",
+          "n_pm": 170976,
+          "median_pm": 64.0,
+          "q25_pm": 50.0,
+          "q75_pm": 102.0,
+          "mean_pm": 131.99038696289062,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM317178",
+          "n_pm": 170976,
+          "median_pm": 98.0,
+          "q25_pm": 71.0,
+          "q75_pm": 171.0,
+          "mean_pm": 222.05921936035156,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM317179",
+          "n_pm": 170976,
+          "median_pm": 63.0,
+          "q25_pm": 50.0,
+          "q75_pm": 98.0,
+          "mean_pm": 127.7376708984375,
+          "pct_pm_ge_20000": 0.0
+        },
+        {
+          "sample": "GSM317180",
+          "n_pm": 170976,
+          "median_pm": 98.0,
+          "q25_pm": 71.0,
+          "q75_pm": 170.0,
+          "mean_pm": 214.6675567626953,
+          "pct_pm_ge_20000": 0.000584877409694928
+        }
+      ],
+      "sample_correlation_min": 0.8602779103169848,
+      "sample_correlation_median": 0.9129061082529357,
+      "pca_variance_PC1": 0.444383158582911,
+      "pca_variance_PC2": 0.2681966551208925,
+      "key_probes": {
+        "ACVS_pcbAB": {
+          "probe": "Pc21g21390_s_at",
+          "log2_values": {
+            "GSM315912": 6.089413251123141,
+            "GSM315913": 6.019231027865638,
+            "GSM315914": 5.984257147324346,
+            "GSM315960": 12.099403541551299,
+            "GSM315961": 11.923985311558669,
+            "GSM315962": 11.73604700223589,
+            "GSM315963": 11.559570938245338,
+            "GSM315964": 11.088820897009045,
+            "GSM315965": 11.106049806736449,
+            "GSM315966": 11.345856317408817,
+            "GSM317178": 6.04505548352921,
+            "GSM317179": 5.98846888581617,
+            "GSM317180": 6.0569085507969325
+          },
+          "DS17690_vs_clusterfree_plusPAA": 55.70007602871004,
+          "DS17690_vs_clusterfree_minusPAA": 35.488389463324715,
+          "DS17690_PAA_effect": 1.5686346326509093,
+          "DS50661_PAA_effect": 0.9994298165855482
+        },
+        "IPNS_pcbC": {
+          "probe": "Pc21g21380_at",
+          "log2_values": {
+            "GSM315912": 6.477380078788439,
+            "GSM315913": 6.489272068513433,
+            "GSM315914": 6.478589648445609,
+            "GSM315960": 12.661748867449653,
+            "GSM315961": 12.70014155120736,
+            "GSM315962": 12.567900937998216,
+            "GSM315963": 12.277707618308034,
+            "GSM315964": 11.890327653912765,
+            "GSM315965": 12.040983079765821,
+            "GSM315966": 12.116142623351232,
+            "GSM317178": 6.294675125423887,
+            "GSM317179": 6.247946586589066,
+            "GSM317180": 6.452378746645405
+          },
+          "DS17690_vs_clusterfree_plusPAA": 74.55369359198642,
+          "DS17690_vs_clusterfree_minusPAA": 46.33628642644951,
+          "DS17690_PAA_effect": 1.4500040783761712,
+          "DS50661_PAA_effect": 0.9012002096483662
+        },
+        "PenDE_penDE": {
+          "probe": "Pc21g21370_at",
+          "log2_values": {
+            "GSM315912": 6.251943199293581,
+            "GSM315913": 6.260103513159021,
+            "GSM315914": 6.0631194948806515,
+            "GSM315960": 10.272361547895374,
+            "GSM315961": 10.45958758570705,
+            "GSM315962": 9.879437319705822,
+            "GSM315963": 9.930085567186707,
+            "GSM315964": 9.328774390445359,
+            "GSM315965": 9.550287874230236,
+            "GSM315966": 9.71959541562879,
+            "GSM317178": 6.25728220001364,
+            "GSM317179": 6.107876873540153,
+            "GSM317180": 6.176177735641787
+          },
+          "DS17690_vs_clusterfree_plusPAA": 15.507802933521436,
+          "DS17690_vs_clusterfree_minusPAA": 10.134224749937387,
+          "DS17690_PAA_effect": 1.518326554007111,
+          "DS50661_PAA_effect": 0.9922142168085953
+        },
+        "PCL_phl": {
+          "probe": "Pc22g14900_at",
+          "log2_values": {
+            "GSM315912": 7.3806121265735305,
+            "GSM315913": 7.310321412080273,
+            "GSM315914": 7.468650684632442,
+            "GSM315960": 8.133230927939977,
+            "GSM315961": 7.763052470115574,
+            "GSM315962": 8.176763954566795,
+            "GSM315963": 7.5181916674316,
+            "GSM315964": 7.618028124714396,
+            "GSM315965": 7.306684071176672,
+            "GSM315966": 7.283946422514844,
+            "GSM317178": 7.924592219441883,
+            "GSM317179": 7.9515564275311075,
+            "GSM317180": 7.784279131757689
+          },
+          "DS17690_vs_clusterfree_plusPAA": 1.0076541064494233,
+          "DS17690_vs_clusterfree_minusPAA": 1.0114031183612586,
+          "DS17690_PAA_effect": 1.4092460745650819,
+          "DS50661_PAA_effect": 1.4144892232670383
+        }
+      }
+    }
+  }
+}

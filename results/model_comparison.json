@@ -1,0 +1,552 @@
+{
+  "task": "limited producer-status classification benchmark",
+  "interpretation": "Exploratory small-n transcriptomic classification only; not an accuracy estimate for the mechanistic ODE model.",
+  "n_samples": 13,
+  "class_counts": {
+    "high": 7,
+    "low": 6
+  },
+  "features": {
+    "3_pathway": [
+      "Pc21g21390_s_at",
+      "Pc21g21380_at",
+      "Pc21g21370_at"
+    ],
+    "genome_wide": "all 15,531 deposited probe-set rows after log2(signal+1)"
+  },
+  "preprocessing": "StandardScaler is fitted within each training fold only. Genome-wide values are log2(signal+1); pathway-probe values retain deposited linear signal before fold-wise scaling.",
+  "random_seed": 0,
+  "fold_definitions": {
+    "leave_one_sample_out": "13 folds; one deposited array held out per fold",
+    "leave_one_condition_out": "4 folds defined by high/low strain \u00d7 PAA-/PAA+ biological condition groups; all arrays in one condition are held out together"
+  },
+  "uncertainty": "Wilson 95% confidence intervals are reported for sample-level accuracy (n=13); these intervals remain wide because the dataset is small.",
+  "models": {
+    "logistic_regression": {
+      "3_pathway": {
+        "training": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_sample_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_condition_out": {
+          "n_correct": 12,
+          "n_total": 13,
+          "accuracy": 0.9230769230769231,
+          "wilson_95_ci": [
+            0.6668604907890041,
+            0.9862895787574435
+          ]
+        }
+      },
+      "genome_wide": {
+        "training": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_sample_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_condition_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        }
+      }
+    },
+    "random_forest": {
+      "3_pathway": {
+        "training": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_sample_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_condition_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        }
+      },
+      "genome_wide": {
+        "training": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_sample_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_condition_out": {
+          "n_correct": 11,
+          "n_total": 13,
+          "accuracy": 0.8461538461538461,
+          "wilson_95_ci": [
+            0.5776536898051745,
+            0.9567418216419186
+          ]
+        }
+      }
+    },
+    "mlp": {
+      "3_pathway": {
+        "training": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_sample_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_condition_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        }
+      },
+      "genome_wide": {
+        "training": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_sample_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        },
+        "leave_one_condition_out": {
+          "n_correct": 13,
+          "n_total": 13,
+          "accuracy": 1.0,
+          "wilson_95_ci": [
+            0.7719046276458016,
+            0.9999999999999999
+          ]
+        }
+      }
+    }
+  },
+  "fold_manifest": {
+    "leave_one_sample_out": [
+      {
+        "fold": 0,
+        "train_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          0
+        ]
+      },
+      {
+        "fold": 1,
+        "train_indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          1
+        ]
+      },
+      {
+        "fold": 2,
+        "train_indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          2
+        ]
+      },
+      {
+        "fold": 3,
+        "train_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          3
+        ]
+      },
+      {
+        "fold": 4,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          4
+        ]
+      },
+      {
+        "fold": 5,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          5
+        ]
+      },
+      {
+        "fold": 6,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          6
+        ]
+      },
+      {
+        "fold": 7,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          7
+        ]
+      },
+      {
+        "fold": 8,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          8
+        ]
+      },
+      {
+        "fold": 9,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          9
+        ]
+      },
+      {
+        "fold": 10,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12
+        ],
+        "test_indices": [
+          10
+        ]
+      },
+      {
+        "fold": 11,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "test_indices": [
+          11
+        ]
+      },
+      {
+        "fold": 12,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "test_indices": [
+          12
+        ]
+      }
+    ],
+    "leave_one_condition_out": [
+      {
+        "fold": 0,
+        "train_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "fold": 1,
+        "train_indices": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "fold": 2,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10,
+          11,
+          12
+        ],
+        "test_indices": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "fold": 3,
+        "train_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "test_indices": [
+          10,
+          11,
+          12
+        ]
+      }
+    ]
+  }
+}

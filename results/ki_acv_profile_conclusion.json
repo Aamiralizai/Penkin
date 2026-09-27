@@ -1,0 +1,23 @@
+{
+  "fine_grid_mM": [
+    0.44,
+    0.46,
+    0.48,
+    0.5,
+    0.52,
+    0.54
+  ],
+  "numerical_minimum_seed31_mM": 0.5,
+  "minimum_Janoska_RMSE": 0.16641689909512578,
+  "Janoska_RMSE_at_0.44": 0.16666781918748622,
+  "Janoska_RMSE_at_0.54": 0.16644916360644713,
+  "relative_RMSE_difference_0.44_vs_min_percent": 0.15077801216389908,
+  "relative_RMSE_difference_0.54_vs_min_percent": 0.0193877613972937,
+  "multiseed_best_grid_points_mM": [
+    0.54,
+    0.16,
+    0.72
+  ],
+  "multiseed_all_tested_values_within_10pct_of_seed_specific_minimum": true,
+  "interpretation": "The profile does not identify a unique Ki within the literature-supported region. The shallow numerical minimum is seed-dependent and is not used to replace the literature anchor with a fitted point estimate."
+}
