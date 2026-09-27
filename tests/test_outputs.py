@@ -54,3 +54,10 @@ def test_feedforward_attrition_is_recorded():
     assert ff['sampled'] == 8000
     assert ff['sampled'] - ff['reference_solver_converged'] == 2752
     assert ff['accepted'] == 5202
+
+
+def test_figure1_equations_match_the_model():
+    """The rate laws and mass balances drawn in Figure 1b equal
+    penkin.model.fluxes and penkin.model.rhs at random states."""
+    from analysis.figure1_architecture import verify_displayed_equations
+    assert verify_displayed_equations() < 1e-9
