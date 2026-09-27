@@ -13,6 +13,8 @@ from scipy.integrate import solve_ivp
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 HERE = FIGURES_DIR
 os.makedirs(HERE, exist_ok=True)
 COL = {"ACVS": "#c1272d", "IPNS": "#0072b2", "PCL": "#009e73", "IAT": "#d55e00", "IAH": "#7b3294"}
@@ -23,6 +25,7 @@ def _J(PAA, p, y0):
     y, f = steady_state(PAA, p, y0)
     return f['secr'] if f is not None else np.nan
 def save(fig, name):
+    fig.tight_layout()
     for ext in ("png", "svg"):
         fig.savefig(os.path.join(HERE, f"{name}.{ext}"),
                     dpi=170 if ext == "png" else None, bbox_inches="tight")
@@ -53,7 +56,7 @@ def compute(n_try=MANUSCRIPT_N_TRY, n_sub=MANUSCRIPT_N_SUB):
     U, S, _ = np.linalg.svd(X, full_matrices=False)
     d["PC"] = (U * S)[:, :3]; d["ev"] = (S**2 / (S**2).sum())[:3]
     d["strain"] = np.array(["high"]*7 + ["low"]*6); d["paa"] = np.array([0,0,0,1,1,1,1,0,0,0,1,1,1])
-    core = {"pcbAB (ACVS)": "Pc21g21390_s_at", "pcbC (IPNS)": "Pc21g21380_at", "penDE (IAT)": "Pc21g21370_at"}
+    core = {"pcbAB\n(ACVS)": "Pc21g21390_s_at", "pcbC\n(IPNS)": "Pc21g21380_at", "penDE\n(IAT)": "Pc21g21370_at"}
     d["H"] = np.array([rows[v] for v in core.values()]); d["hm_genes"] = list(core)
     HP, LP = [3,4,5,6], [10,11,12]
     hi = np.array(M[:, HP].mean(1)); lo = np.array(M[:, LP].mean(1)); d["lfc"] = np.log2((hi+1)/(lo+1))
@@ -121,11 +124,11 @@ def render(d):
 
 
     
-    fig,ax = plt.subplots(2,2,figsize=(11,8.6)); fig.patch.set_facecolor("white")
+    fig,ax = plt.subplots(2,2,figsize=plotstyle.size(2)); fig.patch.set_facecolor("white")
     for s,mk in [("high","o"),("low","s")]:
         for p,c in [(1,"#c1272d"),(0,"#6699cc")]:
             m=(d["strain"]==s)&(d["paa"]==p); ax[0,0].scatter(d["PC"][m,0],d["PC"][m,1],marker=mk,s=90,c=c,edgecolor="k",lw=.6,label=f"{s} {'+PAA' if p else '-PAA'}")
-    ax[0,0].set_xlabel(f"PC1 ({d['ev'][0]*100:.0f}%)"); ax[0,0].set_ylabel(f"PC2 ({d['ev'][1]*100:.0f}%)"); ax[0,0].legend(fontsize=8,frameon=False); lab(ax[0,0],"a  Transcriptome PCA (13 samples)")
+    ax[0,0].set_xlabel(f"PC1 ({d['ev'][0]*100:.0f}%)"); ax[0,0].set_ylabel(f"PC2 ({d['ev'][1]*100:.0f}%)"); ax[0,0].legend(fontsize=8,frameon=False,loc="best"); lab(ax[0,0],"a  Transcriptome PCA (13 samples)")
     Hn=np.log2(d["H"]/d["H"].mean(1,keepdims=True)); im=ax[0,1].imshow(Hn,aspect="auto",cmap="RdBu_r",vmin=-1.5,vmax=1.5)
     ax[0,1].set_yticks(range(3)); ax[0,1].set_yticklabels(d["hm_genes"]); ax[0,1].set_xticks([]); plt.colorbar(im,ax=ax[0,1],label="log2 rel. expr",fraction=0.046); lab(ax[0,1],"b  Penicillin BGC expression (13 arrays)")
     gn=["pcbAB","pcbC","penDE"]; ep=d["expr_point"]; eci=d["expr_ci"]
@@ -138,7 +141,7 @@ def render(d):
     save(fig,"Figure2")
 
     
-    fig,ax = plt.subplots(2,2,figsize=(11,8.4)); fig.patch.set_facecolor("white")
+    fig,ax = plt.subplots(2,2,figsize=plotstyle.size(2)); fig.patch.set_facecolor("white")
     ax[0,0].plot(d["t"]*60,d["Jt"],color=COL["ACVS"],lw=2.3); ax[0,0].set_xlabel("time after PAA step (min)"); ax[0,0].set_ylabel("PenG secretion flux"); ax[0,0].margins(x=0); lab(ax[0,0],"a  PAA stimulus-response")
     st=list(STATES)
     for s,c in [("ACV","#c1272d"),("IPNp","#0072b2"),("PAACoAp","#009e73"),("PENGc","#d55e00")]:
@@ -151,13 +154,13 @@ def render(d):
     save(fig,"Figure3")
 
     
-    fig,ax = plt.subplots(2,2,figsize=(11,8.4)); fig.patch.set_facecolor("white")
+    fig,ax = plt.subplots(2,2,figsize=plotstyle.size(2)); fig.patch.set_facecolor("white")
     bp=ax[0,0].violinplot([d["param"][:,i] for i in range(5)],showmedians=True)
     for i,b in enumerate(bp["bodies"]): b.set_facecolor(list(COL.values())[i]); b.set_alpha(.6)
     ax[0,0].set_xticks(range(1,6)); ax[0,0].set_xticklabels(ENZ); ax[0,0].axhline(1,ls=":",color="gray"); ax[0,0].set_ylabel("sampled Vmax / reference value"); lab(ax[0,0],f"a  Admissible ensemble (n={d['n_acc']})")
     bp=ax[0,1].boxplot([d[f"FCC_{e}"] for e in ENZ],tick_labels=ENZ,patch_artist=True,showfliers=False)
     for patch,e in zip(bp["boxes"],ENZ): patch.set_facecolor(COL[e]); patch.set_alpha(.7)
-    ax[0,1].axhline(0,color="k",lw=.7); ax[0,1].set_ylabel("$C^J$ on PenG flux"); lab(ax[0,1],"b  Reaction-capacity control coefficients")
+    ax[0,1].axhline(0,color="k",lw=.7); ax[0,1].set_ylabel(r"flux-control coefficient $C^{J}_{E_i}$"); lab(ax[0,1],"b  Flux-control coefficients (low-producer state)")
     ax[1,0].hist(d["ratios"],bins=35,color="#c1272d",alpha=.8); ax[1,0].axvline(1,ls="--",color="k",label="high=low"); ax[1,0].axvline(np.median(d["ratios"]),color="darkred",label=f"median {np.median(d['ratios']):.2f}x")
     ax[1,0].set_xlabel("predicted high/low ratio"); ax[1,0].set_ylabel("model count"); ax[1,0].legend(fontsize=8,frameon=False); lab(ax[1,0],f"c  Producer-ratio simulation ({d['frac']*100:.0f}% >1)")
     ax[1,1].hist(d["ratios"],bins=30,color="#888",alpha=.6,density=True,label="parameter unc."); ax[1,1].hist(d["boot_ratios"],bins=30,color="#c1272d",alpha=.5,density=True,label="+transcript bootstrap")
@@ -165,7 +168,7 @@ def render(d):
     save(fig,"Figure4")
 
     
-    fig,ax = plt.subplots(2,2,figsize=(11,8.6)); fig.patch.set_facecolor("white")
+    fig,ax = plt.subplots(2,2,figsize=plotstyle.size(2)); fig.patch.set_facecolor("white")
     action_colors={"ACVS":COL["ACVS"],"IPNS":COL["IPNS"],"PCL":COL["PCL"],"penDE":COL["IAT"]}
     actions=["ACVS","IPNS","PCL","penDE"]
     for e in actions: ax[0,0].plot(d["folds"],d[f"scan_{e}"],"-o",ms=4,color=action_colors[e],label=e)

@@ -12,6 +12,8 @@ import numpy as np
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 
 from penkin.data_io import load_expression
 from penkin.ensemble import fit_ensemble
@@ -171,7 +173,7 @@ def write_figure(out):
     iah_lo = np.asarray([out["penDE_activity_scan"][str(x)]["IAH_flux"]["q25"] for x in PENDE_FOLDS])
     iah_hi = np.asarray([out["penDE_activity_scan"][str(x)]["IAH_flux"]["q75"] for x in PENDE_FOLDS])
 
-    fig, axes = plt.subplots(1, 2, figsize=(9.2, 3.7))
+    fig, axes = plt.subplots(1, 2, figsize=plotstyle.size(1))
     ax = axes[0]
     ax.plot(folds, pen_med, marker="o", linewidth=1.5)
     ax.fill_between(folds, pen_lo, pen_hi, alpha=0.2)
@@ -179,7 +181,7 @@ def write_figure(out):
     ax.set_xscale("log")
     ax.set_xlabel("Coupled penDE activity scaling")
     ax.set_ylabel("Relative penicillin secretion")
-    ax.set_title("A")
+    ax.set_title("a  Penicillin response")
 
     ax = axes[1]
     ax.plot(folds, iah_med, marker="o", linewidth=1.5)
@@ -188,7 +190,7 @@ def write_figure(out):
     ax.set_xscale("log")
     ax.set_xlabel("Coupled penDE activity scaling")
     ax.set_ylabel("Relative IAH branch flux")
-    ax.set_title("B")
+    ax.set_title("b  IAH-branch flux")
 
     fig.tight_layout()
     fig.savefig(OUT_PNG, dpi=300, bbox_inches="tight")
@@ -261,7 +263,7 @@ def write_digitized_relative(rows):
 
 
 def write_external_figure(out, rows):
-    fig, axes = plt.subplots(2, 2, figsize=(9.2, 7.0))
+    fig, axes = plt.subplots(2, 2, figsize=plotstyle.size(2))
 
     ax = axes[0, 0]
     exp_pen = [r for r in rows if r["figure"] == 3 and r["panel"] == "A"]
@@ -270,7 +272,7 @@ def write_external_figure(out, rows):
         ax.plot([r["gene_copy_mid"] for r in z], [r["value"] for r in z], marker="o", label=strain)
     ax.set_xlabel("penDE copy number")
     ax.set_ylabel("Penicillin V (%)")
-    ax.set_title("A  Weber et al. Fig. 3A")
+    ax.set_title("a  Weber et al. Fig. 3A")
     ax.legend(frameon=False, fontsize=8)
 
     ax = axes[0, 1]
@@ -284,7 +286,7 @@ def write_external_figure(out, rows):
     ax.set_xscale("log")
     ax.set_xlabel("Coupled penDE activity scaling")
     ax.set_ylabel("Relative penicillin secretion")
-    ax.set_title("B  Penkin")
+    ax.set_title("b  Penkin")
 
     ax = axes[1, 0]
     exp_apa = [r for r in rows if r["figure"] == 6]
@@ -293,7 +295,7 @@ def write_external_figure(out, rows):
         ax.plot([r["gene_copy_mid"] for r in z], [r["value"] for r in z], marker="o", label=strain)
     ax.set_xlabel("penDE copy number")
     ax.set_ylabel("6-APA (µM)")
-    ax.set_title("C  Weber et al. Fig. 6")
+    ax.set_title("c  Weber et al. Fig. 6")
 
     ax = axes[1, 1]
     med = np.asarray([out["penDE_activity_scan"][str(x)]["IAH_flux"]["median"] for x in PENDE_FOLDS])
@@ -305,7 +307,7 @@ def write_external_figure(out, rows):
     ax.set_xscale("log")
     ax.set_xlabel("Coupled penDE activity scaling")
     ax.set_ylabel("Relative IAH branch flux")
-    ax.set_title("D  Penkin")
+    ax.set_title("d  Penkin")
 
     fig.tight_layout()
     fig.savefig(OUT_EXT_PNG, dpi=300, bbox_inches="tight")

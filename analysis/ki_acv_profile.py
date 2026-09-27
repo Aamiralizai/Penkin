@@ -12,6 +12,8 @@ from scipy.stats import spearmanr
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 
 from penkin.data_io import load_expression
 from penkin.ensemble import FREE, MIN_REFERENCE_SECRETION, MAX_INTERMEDIATE_MM
@@ -223,22 +225,22 @@ def make_figure(out, rows):
     ac=np.array([r['ACVS_control']['median'] for r in rows])
     ip=np.array([r['IPNS_control']['median'] for r in rows])
     valid=np.array([r['valid_fraction'] for r in rows])
-    fig,ax=plt.subplots(2,2,figsize=(10.5,7.8))
+    fig,ax=plt.subplots(2,2,figsize=plotstyle.size(2))
     ax[0,0].plot(x,j,marker='o',label='Janoska RMSE (calibration)')
     ax[0,0].plot(x,t,marker='s',label='Theilgaard RMSE (holdout diagnostic)')
     ax[0,0].axvline(0.44,ls='--',lw=.9,label='Deshmukh 0.44 mM')
     ax[0,0].axvline(0.54,ls=':',lw=.9,label='Earlier 0.54 mM')
-    ax[0,0].set_xlabel('ACV-feedback Ki (mM)'); ax[0,0].set_ylabel('RMSE'); ax[0,0].set_title('A  External-fit profile',loc='left',fontweight='bold'); ax[0,0].legend(frameon=False,fontsize=8)
+    ax[0,0].set_xlabel('ACV-feedback Ki (mM)'); ax[0,0].set_ylabel('RMSE'); ax[0,0].set_title('a  External-fit profile',loc='left',fontweight='bold'); ax[0,0].legend(frameon=False,fontsize=8)
     ax[0,1].plot(x,ac,marker='o',label='ACVS')
     ax[0,1].plot(x,ip,marker='s',label='IPNS')
     ax[0,1].axvspan(0.44,0.54,alpha=.12)
-    ax[0,1].set_xlabel('ACV-feedback Ki (mM)'); ax[0,1].set_ylabel('Median flux-control coefficient'); ax[0,1].set_title('B  Control redistribution',loc='left',fontweight='bold'); ax[0,1].legend(frameon=False)
+    ax[0,1].set_xlabel('ACV-feedback Ki (mM)'); ax[0,1].set_ylabel('Median flux-control coefficient'); ax[0,1].set_title('b  Control redistribution',loc='left',fontweight='bold'); ax[0,1].legend(frameon=False)
     ax[1,0].plot(x,n,marker='o')
     ax[1,0].axvspan(0.44,0.54,alpha=.12)
-    ax[1,0].set_xlabel('ACV-feedback Ki (mM)'); ax[1,0].set_ylabel('Spearman rho'); ax[1,0].set_ylim(-1.05,1.05); ax[1,0].set_title('C  Nijland holdout rank agreement',loc='left',fontweight='bold')
+    ax[1,0].set_xlabel('ACV-feedback Ki (mM)'); ax[1,0].set_ylabel('Spearman rho'); ax[1,0].set_ylim(-1.05,1.05); ax[1,0].set_title('c  Nijland holdout rank agreement',loc='left',fontweight='bold')
     ax[1,1].plot(x,valid,marker='o')
     ax[1,1].axvspan(0.44,0.54,alpha=.12)
-    ax[1,1].set_xlabel('ACV-feedback Ki (mM)'); ax[1,1].set_ylabel('Fraction of paired cohort valid'); ax[1,1].set_ylim(0,1.05); ax[1,1].set_title('D  Physiological validity',loc='left',fontweight='bold')
+    ax[1,1].set_xlabel('ACV-feedback Ki (mM)'); ax[1,1].set_ylabel('Fraction of paired cohort valid'); ax[1,1].set_ylim(0,1.05); ax[1,1].set_title('d  Physiological validity',loc='left',fontweight='bold')
     fig.tight_layout(); fig.savefig(OUT_PNG,dpi=300,bbox_inches='tight'); fig.savefig(OUT_SVG,bbox_inches='tight'); plt.close(fig)
 
 

@@ -322,7 +322,7 @@ def write_figure(result):
     axes[0, 0].plot(x, [n["protein_informed_prediction"][str(int(c))]["median"] for c in x], marker="o", label="protein-informed")
     axes[0, 0].set_xlabel("Penicillin cluster copies")
     axes[0, 0].set_ylabel("Relative penicillin output")
-    axes[0, 0].set_title("A  Nijland 2010")
+    axes[0, 0].set_title("a  Nijland 2010")
     axes[0, 0].legend(frameon=False, fontsize=8)
 
     j = result["Janoska2023"]
@@ -332,7 +332,7 @@ def write_figure(result):
         axes[0, 1].plot(ox, [j["architectures"][kind]["penicillin_relative"][str(v)]["median"] for v in ox], marker="o", label=kind)
     axes[0, 1].set_xlabel("Dissolved O2 (mM)")
     axes[0, 1].set_ylabel("Relative penicillin rate")
-    axes[0, 1].set_title("B  Janoska oxygen response")
+    axes[0, 1].set_title("b  Janoska oxygen response")
     axes[0, 1].legend(frameon=False, fontsize=7)
 
     t = result["Theilgaard2001"]
@@ -349,7 +349,7 @@ def write_figure(result):
     axes[1, 0].axhline(0.91, linewidth=0.8)
     axes[1, 0].set_xticks(np.arange(len(labels)), labels, rotation=30, ha="right")
     axes[1, 0].set_ylabel("Relative penicillin output")
-    axes[1, 0].set_title("C  Theilgaard intervention classes")
+    axes[1, 0].set_title("c  Theilgaard intervention classes")
 
     d = result["Douma2011_GSE24212"]
     labels = ["transcript", "protein moderate", "protein severe"]
@@ -363,7 +363,7 @@ def write_figure(result):
     axes[1, 1].axhline(0.1, linewidth=0.8)
     axes[1, 1].set_xticks(np.arange(3), labels, rotation=25, ha="right")
     axes[1, 1].set_ylabel("Relative penicillin output")
-    axes[1, 1].set_title("D  GSE24212 degeneration")
+    axes[1, 1].set_title("d  GSE24212 degeneration")
     axes[1, 1].legend(frameon=False, fontsize=7)
 
     fig.tight_layout()

@@ -10,6 +10,8 @@ import numpy as np
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 
 from analysis.ki_acv_profile import profile
 
@@ -77,19 +79,19 @@ def main():
     ac=np.array([r['ACVS_control']['median'] for r in fine_rows])
     ip=np.array([r['IPNS_control']['median'] for r in fine_rows])
 
-    fig,ax=plt.subplots(2,2,figsize=(10.5,7.8))
+    fig,ax=plt.subplots(2,2,figsize=plotstyle.size(2))
     ax[0,0].plot(x,j,marker='o')
     ax[0,0].axvline(0.44,ls='--',lw=.8)
     ax[0,0].axvline(0.54,ls=':',lw=.8)
     ax[0,0].set_xlabel('ACV-feedback Ki (mM)')
     ax[0,0].set_ylabel('Janoska RMSE')
-    ax[0,0].set_title('A  Fine profile within literature region',loc='left',fontweight='bold')
+    ax[0,0].set_title('a  Fine profile within literature region',loc='left',fontweight='bold')
 
     ax[0,1].plot(x,ac,marker='o',label='ACVS')
     ax[0,1].plot(x,ip,marker='s',label='IPNS')
     ax[0,1].set_xlabel('ACV-feedback Ki (mM)')
     ax[0,1].set_ylabel('Median flux-control coefficient')
-    ax[0,1].set_title('B  Control remains distributed',loc='left',fontweight='bold')
+    ax[0,1].set_title('b  Control remains distributed',loc='left',fontweight='bold')
     ax[0,1].legend(frameon=False)
 
     xx=np.array([a[0] for a in agg]); med=np.array([a[1] for a in agg]); lo=np.array([a[2] for a in agg]); hi=np.array([a[3] for a in agg])
@@ -98,7 +100,7 @@ def main():
     ax[1,0].axvspan(.44,.54,alpha=.12)
     ax[1,0].set_xlabel('ACV-feedback Ki (mM)')
     ax[1,0].set_ylabel('Janoska RMSE')
-    ax[1,0].set_title('C  Multi-seed profile is shallow',loc='left',fontweight='bold')
+    ax[1,0].set_title('c  Multi-seed profile is shallow',loc='left',fontweight='bold')
 
     ax[1,1].plot(x,t,marker='o',label='Theilgaard RMSE')
     ax[1,1].set_xlabel('ACV-feedback Ki (mM)')
@@ -106,7 +108,7 @@ def main():
     ax2=ax[1,1].twinx()
     ax2.plot(x,n,marker='s')
     ax2.set_ylabel('Nijland Spearman rho')
-    ax[1,1].set_title('D  Holdout diagnostics',loc='left',fontweight='bold')
+    ax[1,1].set_title('d  Holdout diagnostics',loc='left',fontweight='bold')
 
     fig.tight_layout()
     fig.savefig(os.path.join(FIGURES,'FigureS_Ki_ACV_identifiability.png'),dpi=300,bbox_inches='tight')

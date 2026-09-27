@@ -12,6 +12,8 @@ import numpy as np
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 
 from penkin.affymetrix import (
     infer_geo_group,
@@ -171,7 +173,7 @@ def analyze_dataset(gse, raw=False):
 
         # PCA figure
         os.makedirs(FIGURES, exist_ok=True)
-        fig, ax = plt.subplots(figsize=(6.4,5.0))
+        fig, ax = plt.subplots(figsize=(4.4,3.8))
         for i,(sid,title) in enumerate(zip(sample_ids,titles)):
             strain,paa = infer_geo_group(title)
             ax.scatter(scores[i,0], scores[i,1], s=46)

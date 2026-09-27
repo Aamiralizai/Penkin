@@ -5,6 +5,8 @@ import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),'..')); sys.path.insert(0,ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 from penkin import ensemble, data_io
 from penkin.model import steady_state, scale_expression
 
@@ -65,19 +67,19 @@ def main(n_try=8000,n_sub=300,seed=29):
     out={'n_candidates':n_try,'n_accepted':len(acc),'n_models_sampled':len(cohort),'ensemble_seed':7,'sample_seed':seed,
          'activity_folds':FOLDS.tolist(),'low_state_scans':low,'high_state_scans':high,'pairwise_3x_low_state':pair}
     with open(OUT,'w') as fh: json.dump(out,fh,indent=2)
-    fig,ax=plt.subplots(2,2,figsize=(11,8.5))
+    fig,ax=plt.subplots(2,2,figsize=plotstyle.size(2))
     for a in ACTIONS:
         med=np.array([low[a][str(float(x))]['median'] for x in FOLDS]); q1=np.array([low[a][str(float(x))]['q25'] for x in FOLDS]); q3=np.array([low[a][str(float(x))]['q75'] for x in FOLDS])
         ax[0,0].plot(FOLDS,med,marker='o',label=a); ax[0,0].fill_between(FOLDS,q1,q3,alpha=.14)
-    ax[0,0].set_xscale('log'); ax[0,0].axhline(1,ls='--',lw=.8); ax[0,0].set_xlabel('Activity scaling'); ax[0,0].set_ylabel('PenG flux / reference'); ax[0,0].set_title('A  Low-producer activity scans',loc='left',fontweight='bold'); ax[0,0].legend(frameon=False,ncol=2)
+    ax[0,0].set_xscale('log'); ax[0,0].axhline(1,ls='--',lw=.8); ax[0,0].set_xlabel('Activity scaling'); ax[0,0].set_ylabel('PenG flux / reference'); ax[0,0].set_title('a  Low-producer activity scans',loc='left',fontweight='bold'); ax[0,0].legend(frameon=False,ncol=2)
     x=np.arange(4); w=.36; l3=[low[a]['3.0']['median'] for a in ACTIONS]; h3=[high[a]['3.0']['median'] for a in ACTIONS]
-    ax[0,1].bar(x-w/2,l3,width=w,label='Low producer'); ax[0,1].bar(x+w/2,h3,width=w,label='High producer'); ax[0,1].axhline(1,ls='--',lw=.8); ax[0,1].set_xticks(x); ax[0,1].set_xticklabels(ACTIONS); ax[0,1].set_ylabel('PenG flux / state reference'); ax[0,1].set_title('B  Three-fold responses',loc='left',fontweight='bold'); ax[0,1].legend(frameon=False)
+    ax[0,1].bar(x-w/2,l3,width=w,label='Low producer'); ax[0,1].bar(x+w/2,h3,width=w,label='High producer'); ax[0,1].axhline(1,ls='--',lw=.8); ax[0,1].set_xticks(x); ax[0,1].set_xticklabels(ACTIONS); ax[0,1].set_ylabel('PenG flux / state reference'); ax[0,1].set_title('b  Three-fold responses',loc='left',fontweight='bold'); ax[0,1].legend(frameon=False)
     im=ax[1,0].imshow(mat,aspect='auto'); ax[1,0].set_xticks(x); ax[1,0].set_xticklabels(ACTIONS,rotation=35,ha='right'); ax[1,0].set_yticks(x); ax[1,0].set_yticklabels(ACTIONS)
     for i in range(4):
         for j in range(4): ax[1,0].text(j,i,f'{mat[i,j]:.2f}\n(n={cnt[i,j]})',ha='center',va='center',fontsize=8)
-    fig.colorbar(im,ax=ax[1,0],fraction=.046,label='PenG flux / low reference'); ax[1,0].set_title('C  Pairwise three-fold perturbations',loc='left',fontweight='bold')
+    fig.colorbar(im,ax=ax[1,0],fraction=.046,label='PenG flux / low reference'); ax[1,0].set_title('c  Pairwise three-fold perturbations',loc='left',fontweight='bold')
     med=np.array([high['PenDE'][str(float(z))]['median'] for z in FOLDS]); q1=np.array([high['PenDE'][str(float(z))]['q25'] for z in FOLDS]); q3=np.array([high['PenDE'][str(float(z))]['q75'] for z in FOLDS])
-    ax[1,1].plot(FOLDS,med,marker='o'); ax[1,1].fill_between(FOLDS,q1,q3,alpha=.14); ax[1,1].set_xscale('log'); ax[1,1].axhline(1,ls='--',lw=.8); ax[1,1].set_xlabel('Coupled PenDE activity scaling'); ax[1,1].set_ylabel('High-producer PenG flux / reference'); ax[1,1].set_title('D  High-producer PenDE response',loc='left',fontweight='bold')
+    ax[1,1].plot(FOLDS,med,marker='o'); ax[1,1].fill_between(FOLDS,q1,q3,alpha=.14); ax[1,1].set_xscale('log'); ax[1,1].axhline(1,ls='--',lw=.8); ax[1,1].set_xlabel('Coupled PenDE activity scaling'); ax[1,1].set_ylabel('High-producer PenG flux / reference'); ax[1,1].set_title('d  High-producer PenDE response',loc='left',fontweight='bold')
     fig.tight_layout(); fig.savefig(FIGPNG,dpi=300,bbox_inches='tight'); fig.savefig(FIGSVG,bbox_inches='tight'); plt.close(fig)
     print(OUT); print(FIGPNG); return out
 

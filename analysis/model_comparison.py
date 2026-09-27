@@ -16,6 +16,8 @@ import numpy as np
 warnings.filterwarnings('ignore')
 ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),'..')); sys.path.insert(0,ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import LeaveOneGroupOut, LeaveOneOut
@@ -117,7 +119,7 @@ def plot(out):
     import matplotlib; matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     names=[('logistic_regression','Logistic\nregression'),('random_forest','Random\nforest'),('mlp','MLP')]
-    fig,axes=plt.subplots(1,2,figsize=(11,4),sharey=True)
+    fig,axes=plt.subplots(1,2,figsize=plotstyle.size(1),sharey=True)
     for ax,(feat,title) in zip(axes,[('3_pathway','a  3 pathway probe sets'),('genome_wide','b  Genome-wide (15,531 probe sets)')]):
         x=np.arange(len(names)); w=0.35
         for off,key,lab in [(-w/2,'leave_one_sample_out','LOSO-CV'),(w/2,'leave_one_condition_out','LOCO-CV')]:
@@ -126,7 +128,7 @@ def plot(out):
             for b,v in zip(bars,vals): ax.text(b.get_x()+b.get_width()/2,v+0.01,f'{v:.2f}',ha='center',va='bottom',fontsize=9)
         ax.set_xticks(x); ax.set_xticklabels([n for _,n in names]); ax.set_ylim(0,1.08)
         ax.set_title(title,loc='left',fontweight='bold')
-    axes[0].set_ylabel('Classification accuracy'); axes[0].legend(frameon=False,ncol=2,loc='upper right',bbox_to_anchor=(1.0,1.12))
+    axes[0].set_ylabel('Classification accuracy'); axes[1].legend(frameon=True,loc='lower right')
     fig.tight_layout()
     for ext in ('png','svg'):
         fig.savefig(os.path.join(FIGURES_DIR,'FigureS_model_comparison.'+ext),dpi=300 if ext=='png' else None,bbox_inches='tight')

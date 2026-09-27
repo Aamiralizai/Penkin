@@ -54,7 +54,7 @@ def _arrow(ax, x1, y1, x2, y2, text=None, color="#566273", lw=1.6, ls="-", text_
 
 def panel_a(ax):
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
-    ax.set_title("A  Biological architecture", loc="left", fontweight="bold", fontsize=15, pad=8)
+    ax.set_title("a  Biological architecture", loc="left", fontweight="bold", fontsize=15, pad=8)
 
     # Compartments
     ax.add_patch(Rectangle((0.015, 0.56), 0.97, 0.40, fc="#fbfbfd", ec="#c4cad6", lw=1.1))
@@ -104,7 +104,7 @@ def panel_a(ax):
 
 def panel_b(ax):
     ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis("off")
-    ax.set_title("B  Mathematical architecture", loc="left", fontweight="bold", fontsize=15, pad=8)
+    ax.set_title("b  Mathematical architecture", loc="left", fontweight="bold", fontsize=15, pad=8)
 
     _box(ax, 0.04, 0.83, 0.92, 0.11, r"$\frac{d\mathbf{x}}{dt}=\mathbf{S}\,\mathbf{v}(\mathbf{x};\theta)$",
          "#eef2f8", ec="#7d8fb0", fs=15)
@@ -144,7 +144,7 @@ def panel_b(ax):
 
 def panel_c(ax):
     ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis("off")
-    ax.set_title("C  Reference-ensemble → prediction/validation workflow", loc="left", fontweight="bold", fontsize=15, pad=8)
+    ax.set_title("c  Reference-ensemble → prediction/validation workflow", loc="left", fontweight="bold", fontsize=15, pad=8)
 
     # Left inputs
     _box(ax, 0.02, 0.69, 0.18, 0.12, "iAL1006\ntopology", "#e3ecf7", ec="#41618c", fs=9.5)

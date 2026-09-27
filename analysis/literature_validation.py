@@ -12,6 +12,8 @@ from scipy.stats import spearmanr
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 
 from penkin.data_io import load_expression
 from penkin.ensemble import fit_ensemble, predict_producer_ratio
@@ -124,7 +126,8 @@ LABEL = {'baseline': 'Baseline', 'legacy_feedforward': 'Feed-forward (no ACV fee
 
 
 def make_figure(theil, jan, nij):
-    fig, axes = plt.subplots(1, 3, figsize=(14, 4.3))
+    fig, grid = plt.subplots(2, 2, figsize=plotstyle.size(2))
+    axes = grid.ravel(); axes[3].axis('off')
     # Theilgaard observed vs predicted, measured + copy proxy
     ax=axes[0]
     obs=[]
@@ -136,7 +139,7 @@ def make_figure(theil, jan, nij):
         ax.scatter(x,y,label=f'{LABEL[kind]} (RMSE {rec["rmse"]:.2f})',marker=marker)
         obs.extend(x)
     lim=[0.5,3.8]; ax.plot(lim,lim,ls='--',lw=1); ax.set_xlim(lim); ax.set_ylim(lim)
-    ax.set_xlabel('Theilgaard observed relative productivity'); ax.set_ylabel('Penkin predicted relative flux'); ax.set_title('A  Theilgaard 2001')
+    ax.set_xlabel('Theilgaard observed relative productivity'); ax.set_ylabel('Penkin predicted relative flux'); ax.set_title('a  Theilgaard 2001')
     ax.legend(fontsize=7)
     # Janoska
     ax=axes[1]
@@ -146,14 +149,14 @@ def make_figure(theil, jan, nij):
     for kind, marker in [('baseline','o'),('legacy_feedforward','s'),('reversible_IPNS','^')]:
         vals=np.array([jan['architectures'][kind]['penicillin_relative'][str(float(x))]['median'] for x in do])
         ax.plot(do,vals,marker=marker,label=f'{LABEL[kind]} (RMSE {jan["architectures"][kind]["rmse_vs_approx_published_endpoints"]:.2f})')
-    ax.set_xscale('log'); ax.set_xlabel('Dissolved O$_2$ (mM)'); ax.set_ylabel('Relative penicillin rate'); ax.set_title('B  Janoska 2023'); ax.legend(fontsize=7)
+    ax.set_xscale('log'); ax.set_xlabel('Dissolved O$_2$ (mM)'); ax.set_ylabel('Relative penicillin rate'); ax.set_title('b  Janoska 2023'); ax.legend(fontsize=7)
     # Nijland
     ax=axes[2]
     copies=np.array(nij['copy_numbers']); exp=np.array(nij['experimental_penicillin_relative_to_1copy'])
     cp=np.array([nij['copy_proportional_prediction'][str(int(c))]['median'] for c in copies])
     pp=np.array([nij['protein_informed_prediction'][str(int(c))]['median'] for c in copies])
     ax.plot(copies,exp,'o-',label='experiment (digitized)'); ax.plot(copies,cp,'s-',label='copy-proportional'); ax.plot(copies,pp,'^-',label='protein-informed')
-    ax.set_xlabel('Penicillin cluster copies'); ax.set_ylabel('Relative PenV'); ax.set_title('C  Nijland 2010'); ax.legend(fontsize=7)
+    ax.set_xlabel('Penicillin cluster copies'); ax.set_ylabel('Relative PenV'); ax.set_title('c  Nijland 2010'); ax.legend(fontsize=7)
     fig.tight_layout()
     fig.savefig(os.path.join(FIGURES,'FigureS_literature_validation.png'),dpi=240)
     fig.savefig(os.path.join(FIGURES,'FigureS_literature_validation.svg'))

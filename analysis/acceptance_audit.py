@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 
 ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),'..')); sys.path.insert(0,ROOT)
 from penkin.paths import RESULTS_DIR, FIGURES_DIR
+from penkin import plotstyle
+plotstyle.apply()
 from penkin.ensemble import FREE, Y0, PAA_REFERENCE, MIN_REFERENCE_SECRETION, MAX_INTERMEDIATE_MM, sample_candidate
 from penkin.model import DEFAULT_PARAMS, steady_state
 from penkin.variants import steady_variant
@@ -88,18 +90,18 @@ def main(n_try=8000,seed=7):
         w=csv.DictWriter(fh,fieldnames=fields); w.writeheader(); w.writerows(rows)
 
     # A: criterion attrition. B-M: prior vs accepted ECDFs for every free parameter.
-    fig,axes=plt.subplots(4,4,figsize=(13.2,11.0)); axes=axes.ravel()
+    fig,axes=plt.subplots(7,2,figsize=(plotstyle.WIDTH,16.5)); axes=axes.ravel()
     stages=['sampled','reference_solver_converged','secretion_threshold_pass','intermediate_bound_pass','accepted']
     vals=[counts[s] for s in stages]
     axes[0].bar(range(len(stages)),vals); axes[0].set_xticks(range(len(stages))); axes[0].set_xticklabels(['sampled','solver','secretion','bounds','accepted'],rotation=35,ha='right',fontsize=7)
-    axes[0].set_ylabel('candidate count'); axes[0].set_title('A  Admission-criterion attrition',loc='left',fontweight='bold')
+    axes[0].set_ylabel('candidate count'); axes[0].set_ylim(0,max(vals)*1.15); axes[0].set_title('a  Admission-criterion attrition',loc='left',fontweight='bold')
     for i,v in enumerate(vals): axes[0].text(i,v,f'{v}',ha='center',va='bottom',fontsize=7)
     for j,k in enumerate(FREE, start=1):
         a=np.sort(np.asarray(prior[k])); b=np.sort(np.asarray(acc[k]));
         axes[j].plot(a,np.arange(1,len(a)+1)/len(a),label='prior')
         if len(b): axes[j].plot(b,np.arange(1,len(b)+1)/len(b),ls='--',label='accepted')
         axes[j].set_xscale('log'); axes[j].set_xlabel('factor vs reference',fontsize=7); axes[j].set_ylabel('ECDF',fontsize=7); axes[j].tick_params(labelsize=7)
-        axes[j].set_title(f'{chr(65+j)}  {k}',loc='left',fontweight='bold',fontsize=9)
+        axes[j].set_title(f'{chr(97+j)}  {k}',loc='left',fontweight='bold',fontsize=9)
         if j==1: axes[j].legend(frameon=False,fontsize=7)
     for j in range(1+len(FREE),len(axes)): axes[j].axis('off')
     fig.tight_layout()
