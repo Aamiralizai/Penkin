@@ -1,0 +1,6 @@
+strain,pcbAB_copy,pcbC_copy,penDE_copy,shake_flask_percent,rp_umol_gDW_h,rp_relative,ACVS_nkat_gprot,IPNS_ukat_gprot,LLD_ACV_mM,ACV_total_mM,ACV_bisACV,GSH_total_mM,GSH_GSSG,source
+Wis54-1255,1,1,1,100,2.65,1.00,4.34,0.68,0.048,0.077,1.1,5.7,28.0,Theilgaard et al. 2001 Table III
+DS35015,1,2,3,146,2.41,0.91,2.47,0.48,0.018,0.018,,5.5,28.9,Theilgaard et al. 2001 Table III
+DS35035,1,3,1,144,3.59,1.35,7.19,0.90,0.63,1.70,1.19,5.6,15.8,Theilgaard et al. 2001 Table III
+DS35011,1,1,3,182,5.94,2.24,4.81,2.04,0.22,0.80,0.77,4.3,24.8,Theilgaard et al. 2001 Table III
+DS35019,4,2,3,298,7.31,2.76,14.9,0.78,3.8,11.9,0.95,7.3,17.2,Theilgaard et al. 2001 Table III

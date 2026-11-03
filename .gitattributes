@@ -1,0 +1,31 @@
+# Byte-for-byte stability.
+#
+# This repository ships SHA256SUMS.txt and a reference-value checker, so a
+# clone must reproduce the committed bytes exactly on every platform. Git's
+# automatic line-ending conversion would rewrite the reference outputs and
+# figures (generated on Windows, so CSV and SVG carry CRLF) and every checksum
+# would then fail on a Linux or macOS clone.
+#
+# Disabling conversion repository-wide is deliberate. Do not replace this with
+# `* text=auto`.
+* -text
+
+# Mark true binaries so Git and GitHub never attempt to diff them.
+*.png binary
+*.jpg binary
+*.pdf binary
+*.gz  binary
+*.zip binary
+*.npz binary
+*.CEL binary
+
+# Text, but not worth a line-by-line diff in review.
+*.svg -diff
+penkin/data/iAL1006.xml -diff
+results/*.json -diff
+results/*.csv  -diff
+
+# Repository language statistics: this is research code, not a web project.
+docs/**    linguist-documentation
+results/** linguist-generated
+figures/** linguist-generated

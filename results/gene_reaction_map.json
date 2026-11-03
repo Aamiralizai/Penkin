@@ -1,0 +1,31 @@
+{
+  "r0747": {
+    "name": "phenylacetate:CoA ligase",
+    "gene_products": [
+      "Pc13g12270",
+      "Pc21g22010",
+      "Pc22g14900",
+      "Pc22g20270"
+    ],
+    "notes": []
+  },
+  "r0803": {
+    "name": "isopenicillin N amidohydrolase",
+    "gene_products": [
+      "Pc21g21370"
+    ],
+    "notes": [
+      "AUTHORS: Physiological Engineering Aspects of Penicillin chrysogenum, J. Nielsen, World Scientific, 1997",
+      "NOTES: the isopeninicillin-N acyltransferase also has this function"
+    ]
+  },
+  "r0813": {
+    "name": "acyl-CoA:isopenicillin N N-acyltransferase",
+    "gene_products": [
+      "Pc21g21370"
+    ],
+    "notes": [
+      "NOTES: changed location from cytosolic"
+    ]
+  }
+}

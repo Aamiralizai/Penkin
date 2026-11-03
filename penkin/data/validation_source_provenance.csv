@@ -1,0 +1,13 @@
+source,year,identifier,data_used,extraction_status,role_in_penkin
+van den Berg et al.,2008,GSE9825 / doi:10.1038/nbt.1498,GCOS series matrix and raw CEL files,raw GEO files included,producer-state expression input and preprocessing sensitivity
+Harris et al.,2009,GSE12632 / doi:10.1186/1471-2164-10-75,GCOS series matrix raw CEL and Table 2 physiology,raw GEO files plus exact table values,independent transcriptomic and physiological context
+Theilgaard et al.,2001,doi:10.1002/1097-0290(20000220)72:4<379::AID-BIT1000>3.0.CO;2-5,Table III enzyme activities productivity ACV and copy number,exact tabulated values,independent genetic/enzyme perturbation validation
+Nijland et al.,2010,doi:10.1128/AEM.01702-10,cluster copy dose PenV protein and IPN,figure digitization labelled approximate,independent dose-response validation
+Weber et al.,2012,doi:10.1128/AEM.01529-12,penDE/phl perturbation PenV and 6-APA,figure digitization labelled approximate,independent PenDE/PCL validation
+Janoska et al.,2023,doi:10.1002/elsc.202100139,DO perturbation PenG trajectory and ACV/IPN directions,trajectory endpoints approximate; directions text-supported,independent oxygen/IPNS architecture validation
+Nielsen & Jorgensen,1995,doi:10.1021/bp00033a010,ACVS feedback IPNS kinetics and time-varying MCA,source interpretation and parameter provenance,mechanistic/structural constraint
+Pissarra et al.,1996,high-yield kinetic MCA study,oxygen/IPNS and pathway control,source interpretation and parameter provenance,mechanistic/structural constraint
+Douma et al.,2012,doi:10.1002/btpr.1503,PAA and PenG transport kinetics,source equations and fitted transport behavior,transport structure/consistency
+Deshmukh et al.,2015,kinetic PAA stimulus-response study,pathway kinetics and metabolite response,source-informed acceptance/consistency,mechanistic constraint not independent validation
+van Gulik et al.,2000,doi source in uploaded paper,central flux and NADPH limitation,exact example table plus source conclusions,scope/central-metabolism context
+Nasution et al.,2008,doi:10.1016/j.ymben.2007.07.001,ATP cysteine valine alphaAAA and qPen,exact tabulated values,scope/energy-redox context

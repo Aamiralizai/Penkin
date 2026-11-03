@@ -1,0 +1,749 @@
+[
+  {
+    "seed": 31,
+    "best": 0.54,
+    "min_rmse": 0.13859152404935957,
+    "near": [
+      0.16,
+      0.28,
+      0.36,
+      0.44,
+      0.49,
+      0.54,
+      0.6,
+      0.72
+    ],
+    "rows": [
+      {
+        "Ki_ACV_mM": 0.16,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.49480629125193304,
+          "q25": 0.46618040802148236,
+          "q75": 0.617532190114561
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.4233564878101149,
+          "q25": 0.28721162092290853,
+          "q75": 0.5104445787072092
+        },
+        "Janoska_RMSE": 0.14199380085763658,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.5816149439000277,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.7999999999999999,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.184627023981849,
+          "q25": 2.1357253012014255,
+          "q75": 2.1925676071111573
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.28,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.4894991315543037,
+          "q25": 0.4523934134928225,
+          "q75": 0.6517922602636811
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.39529593280274955,
+          "q25": 0.22638341591912264,
+          "q75": 0.5139204225981827
+        },
+        "Janoska_RMSE": 0.140362892970267,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6133583801644843,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.183386112898585,
+          "q25": 2.0935498610264425,
+          "q75": 2.193165792799623
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.36,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.4866796646575364,
+          "q25": 0.442381127700612,
+          "q75": 0.6695405429383863
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.38016526347988233,
+          "q25": 0.19856315900154803,
+          "q75": 0.5158410319116389
+        },
+        "Janoska_RMSE": 0.13926633619482348,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6283480347176149,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1828514476268452,
+          "q25": 2.0719631217273315,
+          "q75": 2.1912287448646826
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.44,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.48431000434452676,
+          "q25": 0.4300252156378787,
+          "q75": 0.6847324789411833
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.36700066622972316,
+          "q25": 0.17702916113054395,
+          "q75": 0.5175641727857037
+        },
+        "Janoska_RMSE": 0.13863223037336914,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6403007950575568,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.18237989707779,
+          "q25": 2.0539700341120506,
+          "q75": 2.1899907064063675
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.49,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.48301660407833846,
+          "q25": 0.4230622308379071,
+          "q75": 0.6932332633857133
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.35957061796851814,
+          "q25": 0.16589300429874693,
+          "q75": 0.5185645158954473
+        },
+        "Janoska_RMSE": 0.13859404358789595,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.646662878255175,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.181864106123992,
+          "q25": 2.044137561834947,
+          "q75": 2.1901303191597945
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.54,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.48184557281597984,
+          "q25": 0.4166610673714675,
+          "q75": 0.7011052682172112
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.35265793740612383,
+          "q25": 0.15614689687375347,
+          "q75": 0.5195163953708917
+        },
+        "Janoska_RMSE": 0.13859152404935957,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6523590863800056,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1812857724022994,
+          "q25": 2.03519413407004,
+          "q75": 2.1902645415616977
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.6,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.48058066998874893,
+          "q25": 0.40964183386143194,
+          "q75": 0.7098394070622804
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.34495768396654947,
+          "q25": 0.14594640887384233,
+          "q75": 0.520603672138032
+        },
+        "Janoska_RMSE": 0.1386213950043984,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6586195954288032,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.18063767596675,
+          "q25": 2.025458328883694,
+          "q75": 2.190419332917947
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.72,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.47843025090960123,
+          "q25": 0.3974438976008681,
+          "q75": 0.7253873920333856
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.33118298960403303,
+          "q25": 0.12928617901781111,
+          "q75": 0.5226294102845561
+        },
+        "Janoska_RMSE": 0.13874746142865008,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6699002524654132,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.179470188111794,
+          "q25": 2.0086193697749697,
+          "q75": 2.1907113628633255
+        }
+      }
+    ]
+  },
+  {
+    "seed": 73,
+    "best": 0.16,
+    "min_rmse": 0.1481202168925275,
+    "near": [
+      0.16,
+      0.28,
+      0.36,
+      0.44,
+      0.49,
+      0.54,
+      0.6,
+      0.72
+    ],
+    "rows": [
+      {
+        "Ki_ACV_mM": 0.16,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5234954189276884,
+          "q25": 0.338033368798008,
+          "q75": 0.6418009967586742
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.44194827181881935,
+          "q25": 0.2728803773161165,
+          "q75": 0.6277804827939338
+        },
+        "Janoska_RMSE": 0.1481202168925275,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.607028243072587,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.7999999999999999,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1845828499877094,
+          "q25": 2.1661687715321367,
+          "q75": 2.1910515816286296
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.28,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5311477487523402,
+          "q25": 0.29430361742094413,
+          "q75": 0.679250206071953
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.40281890091477024,
+          "q25": 0.2209813533528393,
+          "q75": 0.664679404100016
+        },
+        "Janoska_RMSE": 0.15295682786677778,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6457224765179206,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1786532798827913,
+          "q25": 2.1560422270194115,
+          "q75": 2.18813610664811
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.36,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5353576663372299,
+          "q25": 0.27253255067527293,
+          "q75": 0.6978319213970183
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.3913451707263475,
+          "q25": 0.19708646948869696,
+          "q75": 0.6836724771947276
+        },
+        "Janoska_RMSE": 0.15422805707357037,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6643402758576561,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.175234202597907,
+          "q25": 2.149934340760608,
+          "q75": 2.186701027002944
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.44,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5341570178882151,
+          "q25": 0.25440156135833414,
+          "q75": 0.7132935841914584
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.3814338695591385,
+          "q25": 0.17819522719372377,
+          "q75": 0.6998553508950957
+        },
+        "Janoska_RMSE": 0.15443222527459036,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6795454140882949,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.171918183231436,
+          "q25": 2.144898330552837,
+          "q75": 2.1860706443229256
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.49,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5320297768932871,
+          "q25": 0.24446349519425173,
+          "q75": 0.7217687476360751
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.37584161232431734,
+          "q25": 0.16822981183171984,
+          "q75": 0.7088788645650094
+        },
+        "Janoska_RMSE": 0.1545820817069342,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6877711198207409,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1701236204303553,
+          "q25": 2.1422626935507183,
+          "q75": 2.1857149962080915
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.54,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5300001406322878,
+          "q25": 0.23539471786261912,
+          "q75": 0.7295055061469372
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.3706280764037417,
+          "q25": 0.1593757310236905,
+          "q75": 0.7172138436121627
+        },
+        "Janoska_RMSE": 0.15466959922510998,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.695217998536227,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1685001105716495,
+          "q25": 2.1399367658828257,
+          "q75": 2.18538407866083
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.6,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5277222860119222,
+          "q25": 0.2254847685129781,
+          "q75": 0.7379656713132992
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.36479917003946305,
+          "q25": 0.14996036821239078,
+          "q75": 0.7264372973592044
+        },
+        "Janoska_RMSE": 0.1546587236466936,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.7032906337064616,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.166955034611916,
+          "q25": 2.1374818672878177,
+          "q75": 2.185015349386129
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.72,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.523722013832325,
+          "q25": 0.20824163283656996,
+          "q75": 0.7527094236341099
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.3542890214791333,
+          "q25": 0.13421829052102785,
+          "q75": 0.7427910244232826
+        },
+        "Janoska_RMSE": 0.15510403205007992,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.7131847771834592,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1652868246998613,
+          "q25": 2.1334244634370814,
+          "q75": 2.184355402309895
+        }
+      }
+    ]
+  },
+  {
+    "seed": 97,
+    "best": 0.72,
+    "min_rmse": 0.14260151896982304,
+    "near": [
+      0.16,
+      0.28,
+      0.36,
+      0.44,
+      0.49,
+      0.54,
+      0.6,
+      0.72
+    ],
+    "rows": [
+      {
+        "Ki_ACV_mM": 0.16,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5763467372318303,
+          "q25": 0.4448883295146762,
+          "q75": 0.6874482764754402
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.40678198703967605,
+          "q25": 0.26460864373334136,
+          "q75": 0.5252975114989836
+        },
+        "Janoska_RMSE": 0.1556988984008157,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.5969412252076559,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.7999999999999999,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1738167371832713,
+          "q25": 2.1623112606486012,
+          "q75": 2.193514342934421
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.28,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.5971461556748268,
+          "q25": 0.42764113916081864,
+          "q75": 0.7074037636392791
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.37886843686135735,
+          "q25": 0.211357172636012,
+          "q75": 0.5338061703783383
+        },
+        "Janoska_RMSE": 0.14806372684272712,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6302666357611435,
+        "Theilgaard_Spearman": 1.0,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.169740782168037,
+          "q25": 2.1372271838877555,
+          "q75": 2.1957649458728086
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.36,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.6078637461277006,
+          "q25": 0.41850002240440975,
+          "q75": 0.7145725479459488
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.364184197020887,
+          "q25": 0.18716920974792448,
+          "q75": 0.5385441769141259
+        },
+        "Janoska_RMSE": 0.14582433517281984,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6457655468075987,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.16811504163823,
+          "q25": 2.122932683309406,
+          "q75": 2.1969192465606104
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.44,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.617057737904513,
+          "q25": 0.41053535716554596,
+          "q75": 0.7195835100595965
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.3514650655321765,
+          "q25": 0.16823134160293587,
+          "q75": 0.5428127822160401
+        },
+        "Janoska_RMSE": 0.14478858068414127,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6582196476560098,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1668365422733187,
+          "q25": 2.109770884823927,
+          "q75": 2.197900268405319
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.49,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.6222238833255958,
+          "q25": 0.4060126197876245,
+          "q75": 0.725909601305418
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.34427943726245713,
+          "q25": 0.15831372197252647,
+          "q75": 0.5452971596486531
+        },
+        "Janoska_RMSE": 0.14426875149555426,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6648813744615719,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.166162250276007,
+          "q25": 2.102081050215795,
+          "q75": 2.1983136732667705
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.54,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.6270285593979504,
+          "q25": 0.4017765857241897,
+          "q75": 0.7343855103671041
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.3375770527765163,
+          "q25": 0.14954647117002184,
+          "q75": 0.5476647105779626
+        },
+        "Janoska_RMSE": 0.14382009003335375,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6708594832768439,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.165562123553657,
+          "q25": 2.0947773027671306,
+          "q75": 2.1986624639884775
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.6,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.6323890642666198,
+          "q25": 0.39701711135365114,
+          "q75": 0.74371284605121
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.33008203179017503,
+          "q25": 0.14027092654055562,
+          "q75": 0.5503724892374278
+        },
+        "Janoska_RMSE": 0.1433550679978786,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6772655659921383,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.1649219194028797,
+          "q25": 2.086491405031715,
+          "q75": 2.199053592862685
+        }
+      },
+      {
+        "Ki_ACV_mM": 0.72,
+        "n_valid": 20,
+        "valid_fraction": 1.0,
+        "ACVS_control": {
+          "n": 20,
+          "median": 0.6376882207390309,
+          "q25": 0.38836805396505103,
+          "q75": 0.76012151091824
+        },
+        "IPNS_control": {
+          "n": 20,
+          "median": 0.31657162385906545,
+          "q25": 0.1248761378774833,
+          "q75": 0.5554244868412668
+        },
+        "Janoska_RMSE": 0.14260151896982304,
+        "Janoska_ACV_increase_fraction_0.013": 1.0,
+        "Janoska_IPN_decrease_fraction_0.013": 1.0,
+        "Theilgaard_RMSE": 0.6881518701368617,
+        "Theilgaard_Spearman": 0.7999999999999999,
+        "Nijland_Spearman_protein_informed": 0.8999999999999998,
+        "GSE9825_high_low_ratio": {
+          "n": 20,
+          "median": 2.163843818095316,
+          "q25": 2.0713445195744105,
+          "q75": 2.199760318947776
+        }
+      }
+    ]
+  }
+]

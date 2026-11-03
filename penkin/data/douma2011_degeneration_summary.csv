@@ -1,0 +1,7 @@
+feature,reported_change,source_note
+penicillin_productivity,"more than 10-fold decrease","Douma et al. 2011 / GSE24212 study"
+ACVS_protein,"approximately 3-fold decrease","reported after prolonged cultivation"
+IPNS_protein,"5- to 20-fold decrease","reported for two chemostats"
+AT_protein,"smaller decrease","less pronounced than ACVS/IPNS"
+pcbAB_transcript,"approximately 2-fold decrease","only pathway transcript with significant change"
+pcbC_penDE_transcript,"smaller, not significant decrease","transcript change insufficient to explain production loss"
